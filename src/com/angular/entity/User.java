@@ -8,6 +8,12 @@ public class User {
 	private String userName;
 	private String email;
 	private String password;
+	private String firstName;
+	
+	private String lastName;
+	private String phoneNumber;
+	private int following;
+	private int followed;
 	@Id
 	public String getUserName() {
 		return userName;
@@ -65,6 +71,35 @@ public class User {
 		return true;
 	}
 	
-	
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public int getFollowing() {
+		return following;
+	}
+	public void setFollowing(int following) {
+		this.following = following;
+	}
+	public int getFollowed() {
+		return followed;
+	}
+	public void setFollowed(int followed) {
+		this.followed = followed;
+	}
 
 }

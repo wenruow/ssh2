@@ -4,6 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Register</title>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
@@ -19,12 +20,17 @@ function addUser(){
 </script>
 </head>
 <body>
+<div class="container">
 	<form name="userForm" action="">
-		name:<input type="text" name="userName"> 
-		password:<input type="text" name="password">
-		email:<input type="text" name="email">
-		<input type="button" value="add" onclick="addUser()">
+		name:<input type="text" name="userName"> <br>
+		password:<input type="text" name="password"><br>
+		email:<input type="text" name="email"><br>
+		first name:<input type="text" name="firstName"><br>
+		last name:<input type="text" name="lastName"><br>
+		phone#:<input type="text" name="phoneNumber"><br>
+		<input type="button" value="add" onclick="addUser()"><br>
 	</form>
+	</div>
 	<h2>add User</h2>
 
 

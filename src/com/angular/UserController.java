@@ -1,7 +1,9 @@
 package com.angular;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.websocket.server.PathParam;
 
 import org.springframework.stereotype.Controller;
@@ -28,10 +30,13 @@ public class UserController {
 	}
 	
 	@RequestMapping("/checkUser")
-	public String check(User user){
+	public String check(User user,HttpServletRequest request){
 		//System.out.println(user.getUserName());
-		
+		  
 		if(userManager.checkUser(user)){
+			HttpSession session=request.getSession();
+			session.setAttribute("currentUser", user.getUserName());
+			
 			return "/success";
 		}else{
 			return "/fail";

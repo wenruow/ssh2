@@ -11,7 +11,7 @@
 <script type="text/javascript">
 	var app = angular.module("DisplayApp", []);
 	app.controller("DisplayController", function($scope, $http) {
-		
+
 		$scope.searchBooks = function() {
 			var title = $scope.searchByTitle;
 			var url = "http://it-ebooks-api.info/v1/search/" + title;
@@ -28,7 +28,7 @@
 <body ng-app="DisplayApp">
 	<div ng-controller="DisplayController" class="container">
 		<h1>Display the books in table</h1>
-		
+
 
 		<table class="table table-striped">
 			<tr>
@@ -44,7 +44,7 @@
 				<td><a href="book/{{book.ID}}">{{book.Title}}</a></td>
 				<td>{{book.SubTitle}}</td>
 				<td>{{book.isbn}}</td>
-				
+
 			</tr>
 		</table>
 		<div class="input-group">
@@ -55,6 +55,12 @@
 			</span>
 		</div>
 		<!-- /input-group -->
+	</div>
+	<div class="container">
+		<%
+			String str = (String) session.getAttribute("currentUser");
+			out.println(str);
+		%>
 	</div>
 
 </body>

@@ -7,12 +7,6 @@
 <title>ebook4u</title>
 </head>
 <body>
-<h1>SUCCESS!</h1>
-<h2>
-<%
-String str=(String) session.getAttribute("currentUser");
-out.println(str);
-%>
-</h2>
+<H1>Profile</H1>
 </body>
 </html>

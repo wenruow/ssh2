@@ -10,6 +10,7 @@
 		
 
 		<mapping class="com.angular.entity.User" />
+		<mapping class="com.angular.entity.Book" />
 	</session-factory>
 
 </hibernate-configuration>

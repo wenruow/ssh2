@@ -13,4 +13,16 @@
 		<property name="target" ref="userManagerBase"></property>
 
 	</bean>
+	<bean id="bookDao" class="com.angular.dao.BookDAO">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="bookManagerBase" class="com.angular.service.BookManager">
+		<property name="bookDao" ref="bookDao"></property>
+	</bean>
+
+	<bean id="bookManager" parent="transactionBese">
+		<property name="target" ref="bookManagerBase"></property>
+
+	</bean>
+
 </beans>

@@ -32,7 +32,7 @@
 				<div class="col-sm-3">
 					<img ng-src="{{details.Image}}" />
 				</div>
-				<div class="col-sm-9">
+				<div class="col-sm-8">
 					<h3>{{details.Title}}</h3>
 					<h4>
 						<span ng-show="details">--</span>{{details.SubTitle}}
@@ -42,8 +42,19 @@
 						<a href="{{details.Download}}"><u>Download</u> </a>
 					</h3>
 				</div>
+				<div class="col-sm-9">addBook{{details.ID}}
+				</div>
 			</div>
 		</div>
+	</div>
+	<form action="book/add/${id }/" method="post">INPUT
+						<input class="btn btn-default" type="submit" value="{{book.ID}}" path="id" name="ID">
+					</form>
+	<div>
+		<%
+			String str = (String) session.getAttribute("currentUser");
+			out.println(str);
+		%>
 	</div>
 </body>
 </html>
