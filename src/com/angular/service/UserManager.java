@@ -17,5 +17,11 @@ public class UserManager implements IUserManager {
 
 		userDao.saveUser(user);
 	}
+	@Override
+	public boolean checkUser(User user) {
+		//System.out.println(user.getUserName());
+		// TODO Auto-generated method stub
+		return userDao.checkUser(user);
+	}
 
 }

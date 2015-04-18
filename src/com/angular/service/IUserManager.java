@@ -5,4 +5,5 @@ import com.angular.entity.User;
 public interface IUserManager {
 
 	public void saveUser(User user);
+	public boolean checkUser(User user);
 }

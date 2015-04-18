@@ -4,4 +4,6 @@ import com.angular.entity.User;
 
 public interface IUserDAO {
 	public void saveUser(User user) ;
+	public boolean checkUser(User user);
+	
 }
