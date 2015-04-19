@@ -7,7 +7,7 @@ public class BookManager implements IBookManager {
 
 	
 	private IBookDAO bookDao;
-	
+
 	
 
 
